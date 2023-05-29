@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       <meta name="description">
+        <title>Enchatonline shopping</title>
+        <link href="enchant.css">
+        <script>
+       function pageRedirct(){
+            
+          var username =  document.getElementById("username").value;
+          var password= document.getElementById("password").value;
+          console.log(username);
+
+         
+       if(username=="bibi" && password=="bibipassword"){
+        //document.getElementbyID("username").style="background-color:green;"
+        //alert("test");
+            
+               window.location="/home.html";               
+           
+           }
+           else{
+            window.location="/signup.html";
+           }
+        }
+            function test(){
+                alert("div1 clicked");
+            }
+            </script>
+            <style>
+                .h1color{
+               color:red;
+                }
+                
+            </style>
+           
+        
+    </head>
+    <body>
+        
+            
+        
+        <div id="firstdiv" onclick="test()">Sign up here</div>
+        
+        <label style ="padding-right: 40px;" class ="h1color">Name: </label><input id = "Name"; style="background-color: aqua;"color:red;font-family:serif;font-weight: bold; type="text"/>
+        <br>
+        <label style ="padding-right: 16px ;" class ="h1color">Emailaddress:</label><input id="Emailaddress"; style="background-color: aqua;color:red;font-family:serif;font-weight: bold;" type="text"/>
+    
+        <br>
+        <label style ="padding-right: 40px;" class="h1color">Password:</label><input id="password"; style="background-color: aqua;color: red";font-family:serif;font-weight:bold; type="password"/>
+    
+    <br>
+    <label style ="padding-top:60px ;">Submit:</label> <input type="buttom" onclick="pagerdirct()"; value ="Submit"; width="150 px;"/>
+
+
+
+    </body>
+
+
+    
+</html>

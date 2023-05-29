@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       <meta name="description">
+        <title>Enchatonline shopping</title>
+        <link href="enchant.css">
+        <script>
+       function pageRedirct(){
+            
+          var username =  document.getElementById("username").value;
+          var password= document.getElementById("password").value;
+           console.log(username);
+        
+           alert("hello" + " BIBI");
+           
+         
+       if(username=="bibi" && password=="bibipassword"){
+            
+            
+              //document.getElementById("username").style="background-color:geen;"
+           //alert("test");
+               window.location="/home.html";               
+           
+           }
+        else{
+              
+                window.location="/signup.html";
+           }
+       }
+    function test(){
+                alert("div1 clicked");
+            }
+        
+        </script>
+        <style>
+            .h1color{
+                color: red;
+                
+            }
+            
+        </style>
+    </head>
+        <body>
+            
+           
+        
+            <div id="firstdiv" onclick="test()">
+                <h1 class="h1color">Please login here</h1>
+                
+            </div>
+            <div id="seconddiv">
+                 
+                <label  style="padding-right: 47px;" class="h1color">User Name:</label> <input id="username" style= "background-color: aqua;color: red;font-family: serif; font-weight:bold" type="text"/>
+                <br>
+                    <label style="padding-right: 60px;" class="h1color">password:</label> <input id="password" style="background-color: aqua;color: red"  type="password"/>
+            <br/>
+                
+           <label style="padding-right: 40px;">Login button:</label> <input type="button" onclick="pageRedirct();" value="Login button" width="150px;"/>
+               </div>
+               </body>
+            
+         
+</html>

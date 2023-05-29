@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       <meta name="description">
+        <title>Enchatonline shopping</title>
+        <link href="enchant.css">
+       
+    </head>
+    <body>
+        <h1 >This is home page</h1>
+        
+        <h2> Your products</h2>
+        <div id="imageList">
+            
+        </div>
+        
+       
+       
+        
+    </body>
+
+    <script>
+            function pageLoadAddElement(){
+              
+                let images=["1.png","2.png"];
+                var divElement= document.getElementById("imageList");
+                
+                if(divElement!=null){
+                    
+               
+                for(let i=0;i<images.length;i++){
+                    var prodImage = document.createElement('img');
+                    prodImage.src="images/"+images[i]; 
+                    prodImage.style.border = "5px solid green";
+                     prodImage.style.padding = "30px 30px 30px 30px";
+                     prodImage.style.alignItems="center";
+                     
+                    divElement.appendChild(prodImage);
+                    var brTag = document.createElement('BR');
+                    divElement.appendChild(brTag);
+                    var brandLabel= document.createElement('label');
+                    brandLabel.innerHTML='Celvin K';
+                    brandLabel.id="brand";
+                    divElement.appendChild(brandLabel);
+                    var brTag1 = document.createElement('BR');
+                    divElement.appendChild(brTag1);
+                    var priceLabel= document.createElement('label');                    
+                    priceLabel.innerHTML='$230','$130';
+                    priceLabel.id="price";
+                    divElement.appendChild(priceLabel);
+                   var brTag2= document.createElement('BR');
+                    divElement.appendChild(brTag2);
+                    var buttonElement=document.createElement("input");
+                    buttonElement.onclick=function shopping(){
+                        var price=document.getElementById("price").innerHTML;
+           
+                        var brand=document.getElementById("brand").innerHTML;
+                        alert("Barnd: " +brand + "  "+ "Price: "+price);
+                    };
+                    buttonElement.value="AddToCart";
+                    buttonElement.type="button";
+                    divElement.appendChild(buttonElement);
+                    var brTag3 = document.createElement('BR');
+                    divElement.appendChild(brTag3);
+                    //create lable tag and put he innerhtl vlaue as price and brand
+                }
+            }
+               
+                
+            }
+            
+            window.onload=pageLoadAddElement();
+            
+            
+       
+        
+        </script>
+
+    
+</html>
